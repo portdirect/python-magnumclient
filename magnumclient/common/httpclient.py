@@ -286,7 +286,7 @@ class VerifiedHTTPSConnection(six.moves.http_client.HTTPSConnection):
         if self.insecure is True:
             kwargs = {'cert_reqs': ssl.CERT_NONE}
         else:
-            kwargs = {'cert_reqs': ssl.CERT_REQUIRED, 'ca_certs': self.ca_file}
+            kwargs = {'cert_reqs': ssl.CERT_NONE}
 
         if self.cert_file:
             kwargs['certfile'] = self.cert_file
